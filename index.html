@@ -6,202 +6,209 @@
     <meta name="theme-color" content="#17233c">
     <title>Power Up! Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css"> <!-- forgot s -->
+    <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#" aria-label="Power Up! Portfolio - หน้าแรก">
-        <span class="brand-mark" aria-hidden="true">P</span>
-        <span>Power Up! <span class="brand-light">Portfolio</span></span>
-      </a>
-      <span class="storage-note"><span class="status-dot" aria-hidden="true"></span> บันทึกข้อมูลใน Browser นี้</span>
+      <div class="container d-flex align-items-center justify-content-between">
+        <a class="brand" href="#" aria-label="Power Up! Portfolio - หน้าแรก">
+          <span class="brand-mark" aria-hidden="true">P</span>
+          <span>Power Up! <span class="brand-light">Portfolio</span></span>
+        </a>
+        <span class="storage-note"><span class="status-dot" aria-hidden="true"></span> บันทึกข้อมูลใน Browser นี้</span>
+      </div>
     </header>
-    
-    <p></p>
-    
-    <main class="page-shell">
- 
-      <div id="storage-message" class="notice error-notice" role="alert" hidden></div>
-      <div id="app-message" class="notice" role="status" aria-live="polite" hidden></div>
- 
-      <section class="workspace" aria-label="จัดการ Portfolio">
-        <aside class="portfolio-sidebar">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">YOUR SPACE</p>
-              <h2>Portfolios</h2>
-            </div>
-            <span id="portfolio-count" class="count-badge">0</span>
-          </div>
-          <p class="sidebar-copy">เลือก Portfolio เพื่อดูและเพิ่มผลงาน</p>
-          <ul id="portfolio-list" class="portfolio-list" aria-label="รายการ Portfolios"></ul>
-          <div id="empty-portfolios" class="empty-sidebar">
-            <span class="empty-icon" aria-hidden="true">✳</span>
-            <p>ยังไม่มี Portfolio<br>เริ่มสร้างของคุณได้เลย</p>
-          </div>
-          <button id="new-portfolio-button" class="button button-outline button-full" type="button">
-            <span aria-hidden="true">＋</span> สร้าง Portfolio ใหม่
-          </button>
-        </aside>
- 
-        <div class="content-column">
-          <section id="create-panel" class="panel create-panel">
-            <div class="panel-heading">
-              <div class="step-number">01</div>
-              <div>
-                <p class="eyebrow">START HERE</p>
-                <h2>สร้าง Portfolio</h2>
-                <p class="panel-subtitle">บอกเล่าเรื่องราวและความสนใจของคุณ</p>
-              </div>
-            </div>
-            <form id="portfolio-form" novalidate>
-              <div class="form-grid">
-                <label class="field field-wide">
-                  <span>ชื่อที่ต้องการแสดง <span class="required">*</span></span>
-                  <input name="name" type="text" maxlength="80" placeholder="เช่น สมชาย นะจ๊ะ / Somchai Naja" required>
-                </label>
-                <label class="field">
-                  <span>What I Enjoy <span class="required">*</span></span>
-                  <textarea name="whatIEnjoy" rows="3" maxlength="500" placeholder="ฉันชอบทำอะไร..." required></textarea>
-                </label>
-                <label class="field">
-                  <span>What I've Tried <span class="required">*</span></span>
-                  <textarea name="whatIveTried" rows="3" maxlength="500" placeholder="ฉันเคยลองทำอะไรมาแล้วบ้าง..." required></textarea>
-                </label>
-                <label class="field field-wide">
-                  <span>What I'm Curious About <span class="required">*</span></span>
-                  <textarea name="whatImCuriousAbout" rows="3" maxlength="500" placeholder="ฉันสนใจหรืออยากรู้อะไรเพิ่มเติม..." required></textarea>
-                </label>
-              </div>
-              <div class="form-footer">
-                <p class="form-hint"><span class="required">*</span> จำเป็นต้องกรอก</p>
-                <button class="button button-primary" type="submit">บันทึก Portfolio <span aria-hidden="true">→</span></button>
-              </div>
-              <p class="form-error" id="portfolio-error" role="alert" hidden></p>
-            </form>
-          </section>
- 
-          <section id="portfolio-view" class="portfolio-view" hidden>
-            <div class="profile-banner">
-              <div class="profile-avatar" id="profile-avatar" aria-hidden="true"></div>
-              <div class="profile-copy">
-                <p class="eyebrow">PORTFOLIO</p>
-                <h2 id="profile-name"></h2>
-                <p id="profile-count" class="profile-count"></p>
-              </div>
-              <button id="delete-portfolio-button" class="button button-quiet" type="button">ลบ Portfolio</button>
-            </div>
- 
-            <div class="profile-details">
-              <article class="detail-card">
-                <span class="detail-symbol" aria-hidden="true">♡</span>
-                <h3>What I Enjoy</h3>
-                <p id="profile-enjoy"></p>
-              </article>
-              <article class="detail-card">
-                <span class="detail-symbol" aria-hidden="true">↗</span>
-                <h3>What I've Tried</h3>
-                <p id="profile-tried"></p>
-              </article>
-              <article class="detail-card">
-                <span class="detail-symbol" aria-hidden="true">✳</span>
-                <h3>What I'm Curious About</h3>
-                <p id="profile-curious"></p>
-              </article>
-            </div>
- 
-            <div class="items-heading">
-              <div>
-                <p class="eyebrow">MADE & EXPERIENCED</p>
-                <h2>ผลงานและกิจกรรม</h2>
-              </div>
-              <span id="item-count" class="count-badge">0 items</span>
-            </div>
- 
-            <div id="items-list" class="items-list"></div>
-            <div id="empty-items" class="empty-items" hidden>
-              <span class="empty-icon" aria-hidden="true">✳</span>
-              <h3>เรื่องราวแรกของคุณเริ่มที่นี่</h3>
-              <p>เพิ่มผลงานหรือกิจกรรม เพื่อบันทึกสิ่งที่คุณได้ลงมือทำ</p>
-            </div>
- 
-            <section class="panel item-form-panel">
-              <div class="panel-heading">
-                <div class="step-number step-number-alt">02</div>
+
+    <main class="container py-4">
+      <div id="storage-message" class="alert alert-danger" role="alert" hidden></div>
+      <div id="app-message" class="alert alert-success" role="status" aria-live="polite" hidden></div>
+
+      <section class="row g-4" aria-label="จัดการ Portfolio">
+        <aside class="col-lg-3">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <div class="section-heading d-flex justify-content-between align-items-center">
                 <div>
-                  <p class="eyebrow">ADD TO YOUR STORY</p>
-                  <h2>เพิ่ม Portfolio Item</h2>
-                  <p class="panel-subtitle">บันทึกผลงานหรือกิจกรรมใหม่</p>
+                  <p class="eyebrow mb-1">YOUR SPACE</p>
+                  <h2 class="h4 mb-0">Portfolios</h2>
+                </div>
+                <span id="portfolio-count" class="badge text-bg-success">0</span>
+              </div>
+              <p class="sidebar-copy mt-2">เลือก Portfolio เพื่อดูและเพิ่มผลงาน</p>
+              <ul id="portfolio-list" class="portfolio-list list-unstyled" aria-label="รายการ Portfolios"></ul>
+              <div id="empty-portfolios" class="empty-sidebar text-center">
+                <span class="empty-icon" aria-hidden="true">✳</span>
+                <p>ยังไม่มี Portfolio<br>เริ่มสร้างของคุณได้เลย</p>
+              </div>
+              <button id="new-portfolio-button" class="btn btn-outline-success w-100" type="button">
+                <span aria-hidden="true">＋</span> สร้าง Portfolio ใหม่
+              </button>
+            </div>
+          </div>
+        </aside>
+
+        <div class="col-lg-9">
+          <section id="create-panel" class="card shadow-sm mb-4">
+            <div class="card-body">
+              <div class="panel-heading d-flex align-items-start gap-3 mb-4">
+                <span class="step-number badge rounded-pill text-bg-success p-2">01</span>
+                <div>
+                  <p class="eyebrow">START HERE</p>
+                  <h2 class="h4">สร้าง Portfolio</h2>
+                  <p class="panel-subtitle">บอกเล่าเรื่องราวและความสนใจของคุณ</p>
                 </div>
               </div>
+            <form id="portfolio-form" novalidate>
+              <div class="row g-3">
+                <label class="field form-label col-12">
+                  <span>ชื่อที่ต้องการแสดง <span class="required">*</span></span>
+                  <input class="form-control" name="name" type="text" maxlength="80" placeholder="เช่น สมชาย นะจ๊ะ / Somchai Naja" required>
+                </label>
+                <label class="field form-label col-md-6">
+                  <span>What I Enjoy <span class="required">*</span></span>
+                  <textarea class="form-control" name="whatIEnjoy" rows="3" maxlength="500" placeholder="ฉันชอบทำอะไร..." required></textarea>
+                </label>
+                <label class="field form-label col-md-6">
+                  <span>What I've Tried <span class="required">*</span></span>
+                  <textarea class="form-control" name="whatIveTried" rows="3" maxlength="500" placeholder="ฉันเคยลองทำอะไรมาแล้วบ้าง..." required></textarea>
+                </label>
+                <label class="field form-label col-12">
+                  <span>What I'm Curious About <span class="required">*</span></span>
+                  <textarea class="form-control" name="whatImCuriousAbout" rows="3" maxlength="500" placeholder="ฉันสนใจหรืออยากรู้อะไรเพิ่มเติม..." required></textarea>
+                </label>
+              </div>
+              <div class="form-footer d-flex justify-content-between align-items-center gap-3 mt-3">
+                <p class="form-hint mb-0"><span class="required">*</span> จำเป็นต้องกรอก</p>
+                <button class="btn btn-success" type="submit">บันทึก Portfolio <span aria-hidden="true">→</span></button>
+              </div>
+              <p class="invalid-feedback d-block" id="portfolio-error" role="alert" hidden></p>
+            </form>
+            </div>
+          </section>
+
+          <section id="portfolio-view" class="portfolio-view" hidden>
+            <div class="profile-banner d-flex align-items-center gap-3 rounded bg-dark text-white p-3 mb-3">
+              <div class="profile-avatar" id="profile-avatar" aria-hidden="true"></div>
+              <div class="profile-copy flex-grow-1">
+                <p class="eyebrow">PORTFOLIO</p>
+                <h2 class="h3" id="profile-name"></h2>
+                <p id="profile-count" class="profile-count"></p>
+              </div>
+              <button id="delete-portfolio-button" class="btn btn-outline-danger btn-sm" type="button">ลบ Portfolio</button>
+            </div>
+
+            <div class="row g-3 mb-4">
+              <article class="col-md-4"><div class="card h-100"><div class="card-body">
+                <span class="detail-symbol" aria-hidden="true">♡</span>
+                <h3 class="h6">What I Enjoy</h3>
+                <p id="profile-enjoy"></p>
+              </div></div></article>
+              <article class="col-md-4"><div class="card h-100"><div class="card-body">
+                <span class="detail-symbol" aria-hidden="true">↗</span>
+                <h3 class="h6">What I've Tried</h3>
+                <p id="profile-tried"></p>
+              </div></div></article>
+              <article class="col-md-4"><div class="card h-100"><div class="card-body">
+                <span class="detail-symbol" aria-hidden="true">✳</span>
+                <h3 class="h6">What I'm Curious About</h3>
+                <p id="profile-curious"></p>
+              </div></div></article>
+            </div>
+
+            <div class="items-heading d-flex justify-content-between align-items-center mb-3">
+              <div>
+                <p class="eyebrow">MADE & EXPERIENCED</p>
+                <h2 class="h4">ผลงานและกิจกรรม</h2>
+              </div>
+              <span id="item-count" class="badge text-bg-success">0 items</span>
+            </div>
+
+            <div id="items-list" class="items-list d-grid gap-3"></div>
+            <div id="empty-items" class="empty-items text-center py-4" hidden>
+              <span class="empty-icon" aria-hidden="true">✳</span>
+              <h3 class="h5">เรื่องราวแรกของคุณเริ่มที่นี่</h3>
+              <p>เพิ่มผลงานหรือกิจกรรม เพื่อบันทึกสิ่งที่คุณได้ลงมือทำ</p>
+            </div>
+
+            <section class="card shadow-sm mt-4">
+              <div class="card-body">
+                <div class="panel-heading d-flex align-items-start gap-3 mb-4">
+                  <span class="step-number badge rounded-pill text-bg-success p-2">02</span>
+                  <div>
+                    <p class="eyebrow">ADD TO YOUR STORY</p>
+                    <h2 class="h4">เพิ่ม Portfolio Item</h2>
+                    <p class="panel-subtitle">บันทึกผลงานหรือกิจกรรมใหม่</p>
+                  </div>
+                </div>
               <form id="item-form" novalidate>
-                <div class="form-grid">
-                  <label class="field">
+                <div class="row g-3">
+                  <label class="field form-label col-md-6">
                     <span>Title <span class="required">*</span></span>
-                    <input name="title" type="text" maxlength="120" placeholder="ชื่อผลงานหรือกิจกรรม" required>
+                    <input class="form-control" name="title" type="text" maxlength="120" placeholder="ชื่อผลงานหรือกิจกรรม" required>
                   </label>
-                  <label class="field">
+                  <label class="field form-label col-md-6">
                     <span>Type <span class="required">*</span></span>
-                    <input name="type" type="text" maxlength="80" placeholder="เช่น Course Assignment" required>
+                    <input class="form-control" name="type" type="text" maxlength="80" placeholder="เช่น Course Assignment" required>
                   </label>
-                  <label class="field">
+                  <label class="field form-label col-md-6">
                     <span>Date <span class="required">*</span></span>
-                    <input name="date" type="date" required>
+                    <input class="form-control" name="date" type="date" required>
                   </label>
-                  <label class="field">
+                  <label class="field form-label col-md-6">
                     <span>Role <span class="required">*</span></span>
-                    <input name="role" type="text" maxlength="100" placeholder="บทบาทของคุณ" required>
+                    <input class="form-control" name="role" type="text" maxlength="100" placeholder="บทบาทของคุณ" required>
                   </label>
-                  <label class="field field-wide">
+                  <label class="field form-label col-12">
                     <span>Description <span class="required">*</span></span>
-                    <textarea name="description" rows="3" maxlength="1200" placeholder="เล่ารายละเอียดของผลงานหรือกิจกรรม" required></textarea>
+                    <textarea class="form-control" name="description" rows="3" maxlength="1200" placeholder="เล่ารายละเอียดของผลงานหรือกิจกรรม" required></textarea>
                   </label>
-                  <label class="field field-wide">
+                  <label class="field form-label col-12">
                     <span>Skills <span class="required">*</span></span>
-                    <input name="skills" type="text" maxlength="300" placeholder="คั่นแต่ละทักษะด้วยเครื่องหมายจุลภาค เช่น HTML, CSS" required>
+                    <input class="form-control" name="skills" type="text" maxlength="300" placeholder="คั่นแต่ละทักษะด้วยเครื่องหมายจุลภาค เช่น HTML, CSS" required>
                     <small>ระบุทักษะอย่างน้อย 1 รายการ คั่นด้วยเครื่องหมายจุลภาค</small>
                   </label>
                 </div>
  
-                <fieldset class="reflection-fields">
+                <fieldset class="reflection-fields border rounded p-3 mt-3">
                   <legend>Reflection <span class="required">*</span></legend>
-                  <div class="form-grid">
-                    <label class="field">
+                  <div class="row g-3">
+                    <label class="field form-label col-md-6">
                       <span>What I did</span>
-                      <textarea name="whatIDid" rows="3" maxlength="800" placeholder="คุณได้ลงมือทำอะไร" required></textarea>
+                      <textarea class="form-control" name="whatIDid" rows="3" maxlength="800" placeholder="คุณได้ลงมือทำอะไร" required></textarea>
                     </label>
-                    <label class="field">
+                    <label class="field form-label col-md-6">
                       <span>What I learned</span>
-                      <textarea name="whatILearned" rows="3" maxlength="800" placeholder="คุณได้เรียนรู้อะไร" required></textarea>
+                      <textarea class="form-control" name="whatILearned" rows="3" maxlength="800" placeholder="คุณได้เรียนรู้อะไร" required></textarea>
                     </label>
-                    <label class="field">
+                    <label class="field form-label col-md-6">
                       <span>Challenge</span>
-                      <textarea name="challenge" rows="3" maxlength="800" placeholder="ความท้าทายที่พบคืออะไร" required></textarea>
+                      <textarea class="form-control" name="challenge" rows="3" maxlength="800" placeholder="ความท้าทายที่พบคืออะไร" required></textarea>
                     </label>
-                    <label class="field">
+                    <label class="field form-label col-md-6">
                       <span>Next step</span>
-                      <textarea name="nextStep" rows="3" maxlength="800" placeholder="ก้าวต่อไปที่อยากทำคืออะไร" required></textarea>
+                      <textarea class="form-control" name="nextStep" rows="3" maxlength="800" placeholder="ก้าวต่อไปที่อยากทำคืออะไร" required></textarea>
                     </label>
                   </div>
                 </fieldset>
  
-                <label class="field evidence-field">
+                <label class="field form-label mt-3">
                   <span>Evidence <span class="required">*</span></span>
-                  <textarea name="evidence" rows="2" maxlength="1000" placeholder="ใส่ URL อย่างน้อย 1 รายการ โดยแยกแต่ละลิงก์คนละบรรทัด" required></textarea>
+                  <textarea class="form-control" name="evidence" rows="2" maxlength="1000" placeholder="ใส่ URL อย่างน้อย 1 รายการ โดยแยกแต่ละลิงก์คนละบรรทัด" required></textarea>
                   <small>รองรับลิงก์ http:// หรือ https:// อย่างน้อย 1 รายการ</small>
                 </label>
  
-                <div class="form-footer">
-                  <p class="form-hint"><span class="required">*</span> จำเป็นต้องกรอก</p>
-                  <button class="button button-primary" type="submit">บันทึก Item <span aria-hidden="true">→</span></button>
+                <div class="form-footer d-flex justify-content-between align-items-center gap-3 mt-3">
+                  <p class="form-hint mb-0"><span class="required">*</span> จำเป็นต้องกรอก</p>
+                  <button class="btn btn-success" type="submit">บันทึก Item <span aria-hidden="true">→</span></button>
                 </div>
-                <p class="form-error" id="item-error" role="alert" hidden></p>
+                <p class="invalid-feedback d-block" id="item-error" role="alert" hidden></p>
               </form>
+              </div>
             </section>
           </section>
         </div>
       </section>
-      <footer class="page-footer">ผลงานของคุณเติบโตไปพร้อมกับคุณ <span aria-hidden="true">✳</span></footer>
+      <footer class="page-footer text-center text-secondary py-4">ผลงานของคุณเติบโตไปพร้อมกับคุณ <span aria-hidden="true">✳</span></footer>
     </main>
 
   </body>
