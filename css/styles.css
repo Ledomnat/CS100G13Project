@@ -1,0 +1,82 @@
+:root {
+    --ink: #17233c;
+    --muted: #68758b;
+    --accent: #70e1d1;
+    --surface: #ffffff;
+    --page: #f4f7fb;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+    color: var(--ink);
+    background: var(--page);
+    margin: 0;
+}
+
+.site-header {
+    color: white;
+    background:
+        radial-gradient(ellipse at 80% 10%, rgba(112, 225, 209, 0.2), transparent 35%),
+        linear-gradient(135deg, #17233c, #263f68);
+    display: flex;
+    min-height: 4.5rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 max(5vw, 1.25rem);
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
+.brand-mark {
+    display: grid;
+    width: 2rem;
+    height: 2rem;
+    place-items: center;
+    border-radius: 0.55rem;
+    color: #17233c;
+    background: var(--accent);
+}
+
+.brand-light,
+
+
+.storage-note {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.storage-note {
+    font-size: 0.85rem;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 0.55rem;
+    height: 0.55rem;
+    margin-right: 0.35rem;
+    border-radius: 50%;
+    background: var(--accent);
+}
+
+@media (max-width: 520px) {
+    .site-header {
+        padding-inline: 1rem;
+    }
+
+    .storage-note {
+        max-width: 8rem;
+        text-align: right;
+    }
+}
