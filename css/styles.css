@@ -479,11 +479,4 @@ border-radius: 0.5rem;
 background: #e8f8f5; 
 color: #176c69; 
 font-weight: 700; 
-=======
-body { 
-font-family: Arial, sans-serif; 
-line-height: 1.7; 
-color: var(--ink); 
-background: var(--page); 
->>>>>>> ed5dff96abba2fe32853f430de3a5601e157d014
 }
