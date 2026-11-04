@@ -491,3 +491,28 @@ font-weight: 600;
 .required { 
 color: #b64c43; 
 }
+
+.form-footer { 
+margin-top: 1rem; 
+}
+
+.profile-banner { 
+justify-content: flex-start; 
+margin-bottom: 1rem; 
+padding: 1.25rem; 
+border-radius: 1rem; 
+background: #17233c; 
+color: white; 
+} 
+
+.profile-copy { 
+flex: 1; 
+}
+
+.profile-count { 
+color: rgba(255, 255, 255, 0.72); 
+}
+
+.items-heading { 
+margin-bottom: 1rem; 
+}
