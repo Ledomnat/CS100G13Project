@@ -438,3 +438,24 @@ padding: 1rem;
 color: var(--muted); 
 text-align: center; 
 } 
+
+.button-full { 
+width: 100%; 
+} 
+.button-primary { 
+border-color: #17233c; 
+background: #17233c; 
+color: white; 
+} 
+.button-primary:hover, 
+.button-outline:hover, 
+.portfolio-choice:hover { 
+border-color: #078b83; 
+} 
+.button:disabled { 
+cursor: not-allowed; 
+opacity: 0.55; 
+} 
+.content-column { 
+min-width: 0; 
+}
