@@ -422,10 +422,8 @@ overflow: hidden;
 text-overflow: ellipsis; 
 white-space: nowrap; 
 } 
-.choice-meta, 
-.profile-count, 
-.item-meta, 
-.field small { 
+
+.profile-count { 
 color: var(--muted); 
 font-size: 0.82rem; 
 }
@@ -458,8 +456,7 @@ opacity: 0.55;
 min-width: 0; 
 }
 
-.create-panel, 
-.item-form-panel { 
+.create-panel { 
 margin-bottom: 1.25rem; 
 } 
 .panel-heading { 
@@ -468,8 +465,7 @@ align-items: flex-start;
 gap: 0.75rem; 
 margin-bottom: 1.25rem; 
 } 
-.step-number, 
-.count-badge { 
+.step-number { 
 display: inline-grid; 
 min-width: 2rem; 
 min-height: 2rem; 
@@ -478,4 +474,20 @@ border-radius: 0.5rem;
 background: #e8f8f5; 
 color: #176c69; 
 font-weight: 700; 
+}
+
+.reflection { 
+display: grid; 
+grid-template-columns: repeat(2, minmax(0, 1fr)); 
+gap: 1rem; 
+} 
+
+.field { 
+display: grid; 
+gap: 0.35rem; 
+font-weight: 600; 
+}
+
+.required { 
+color: #b64c43; 
 }
