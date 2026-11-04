@@ -16,6 +16,11 @@ body {
     color: var(--ink);
     background: var(--page);
     margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+    color: var(--ink);
+    background: var(--page);
+    margin: 0;
 }
 
 .site-header {
@@ -23,6 +28,11 @@ body {
     background:
         radial-gradient(ellipse at 80% 10%, rgba(112, 225, 209, 0.2), transparent 35%),
         linear-gradient(135deg, #17233c, #263f68);
+    display: flex;
+    min-height: 4.5rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 max(5vw, 1.25rem);
     display: flex;
     min-height: 4.5rem;
     align-items: center;
@@ -51,13 +61,8 @@ body {
 }
 
 .brand-light,
-
-
 .storage-note {
     color: rgba(255, 255, 255, 0.72);
-}
-
-.storage-note {
     font-size: 0.85rem;
 }
 
@@ -79,6 +84,10 @@ body {
         max-width: 8rem;
         text-align: right;
     }
+
+    .profile-banner {
+        flex-wrap: wrap;
+    }
 }
 
 .detail-symbol {
@@ -97,21 +106,12 @@ body {
     line-height: 1;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.7;
-    color: var(--ink);
-    background: var(--page);
-}
 
 .eyebrow {
     color: #078b83;
     font-size: 0.76rem;
     font-weight: 700;
     letter-spacing: 0.16em;
-}
-
-.eyebrow {
     color: var(--accent);
 }
 
@@ -136,23 +136,12 @@ body {
     }
 }
 
-body {
-    margin: 0;
-}
-
-.site-header {
-    display: flex;
-    min-height: 4.5rem;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 max(5vw, 1.25rem);
-}
 .sidebar-copy,
 .panel-subtitle,
-.form-hint,
-.page-footer {
+.form-hint {
     color: var(--muted);
 }
+
 .panel {
     padding: 1.25rem;
     border: 1px solid #e7edf5;
@@ -195,6 +184,7 @@ body {
     padding: 0;
     list-style: none;
 }
+
 .button {
     padding: 0.6rem 0.8rem;
     border: 1px solid #dce5ee;
@@ -204,6 +194,7 @@ body {
     font: inherit;
     cursor: pointer;
 }
+
 .profile-avatar {
     display: grid;
     flex: 0 0 auto;
@@ -220,6 +211,7 @@ body {
 .profile-count {
     color: var(--muted);
     font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.72);
 }
 
 .empty-sidebar,
@@ -248,11 +240,6 @@ body {
     font-weight: 700;
 }
 
-.reflection {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-}
 
 .field {
     display: grid;
@@ -281,10 +268,6 @@ body {
     flex: 1;
 }
 
-.profile-count {
-    color: rgba(255, 255, 255, 0.72);
-}
-
 .items-heading {
     margin-bottom: 1rem;
 }
@@ -304,18 +287,9 @@ body {
 .page-footer {
     padding: 2rem 0;
     text-align: center;
+    color: var(--muted);
 }
 
 [hidden] {
     display: none !important;
-}
-
-@media (max-width: 520px) {
-    .site-header {
-        padding-inline: 1rem;
-    }
-
-    .profile-banner {
-        flex-wrap: wrap;
-    }
 }
