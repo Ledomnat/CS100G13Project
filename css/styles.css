@@ -80,7 +80,6 @@ body {
         text-align: right;
     }
 }
-
 .detail-symbol {
 display: inline-block;
 margin-bottom: 0.25rem;
@@ -100,4 +99,4 @@ font-family: Arial, sans-serif;
 line-height: 1.7; 
 color: var(--ink); 
 background: var(--page); 
-} 
+}
