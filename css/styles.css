@@ -431,3 +431,10 @@ white-space: nowrap;
 color: var(--muted); 
 font-size: 0.82rem; 
 }
+
+.empty-sidebar, 
+.empty-items { 
+padding: 1rem; 
+color: var(--muted); 
+text-align: center; 
+} 
