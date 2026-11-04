@@ -414,3 +414,20 @@ background: #e8f8f5;
 color: #176c69; 
 font-weight: 700; 
 }
+
+.choice-copy { 
+display: grid; 
+min-width: 0; 
+} 
+.choice-name { 
+overflow: hidden; 
+text-overflow: ellipsis; 
+white-space: nowrap; 
+} 
+.choice-meta, 
+.profile-count, 
+.item-meta, 
+.field small { 
+color: var(--muted); 
+font-size: 0.82rem; 
+}
