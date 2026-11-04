@@ -16,11 +16,6 @@ body {
     color: var(--ink);
     background: var(--page);
     margin: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.7;
-    color: var(--ink);
-    background: var(--page);
-    margin: 0;
 }
 
 .site-header {
@@ -28,11 +23,6 @@ body {
     background:
         radial-gradient(ellipse at 80% 10%, rgba(112, 225, 209, 0.2), transparent 35%),
         linear-gradient(135deg, #17233c, #263f68);
-    display: flex;
-    min-height: 4.5rem;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 max(5vw, 1.25rem);
     display: flex;
     min-height: 4.5rem;
     align-items: center;
@@ -108,7 +98,6 @@ body {
 
 
 .eyebrow {
-    color: #078b83;
     font-size: 0.76rem;
     font-weight: 700;
     letter-spacing: 0.16em;
