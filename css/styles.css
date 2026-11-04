@@ -80,3 +80,24 @@ body {
         text-align: right;
     }
 }
+
+.detail-symbol {
+display: inline-block;
+margin-bottom: 0.25rem;
+color:#078b83;
+font-size: 1.25rem;
+line-height: 1;
+}
+.empty-icon {
+display: inline-block;
+margin-bottom: 0.25rem;
+color: #e75480;
+font-size: 1.25rem;
+line-height: 1;
+}
+body { 
+font-family: Arial, sans-serif; 
+line-height: 1.7; 
+color: var(--ink); 
+background: var(--page); 
+} 
