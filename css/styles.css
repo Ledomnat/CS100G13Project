@@ -402,7 +402,7 @@ body {
     background: #e8f8f5;
 }
 
-.choice-avatar,
+
 .profile-avatar {
     display: grid;
     flex: 0 0 auto;
@@ -415,16 +415,6 @@ body {
     font-weight: 700;
 }
 
-.choice-copy {
-    display: grid;
-    min-width: 0;
-}
-
-.choice-name {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
 
 .profile-count {
     color: var(--muted);
@@ -438,34 +428,6 @@ body {
     text-align: center;
 }
 
-.button-full {
-    width: 100%;
-}
-
-.button-primary {
-    border-color: #17233c;
-    background: #17233c;
-    color: white;
-}
-
-.button-primary:hover,
-.button-outline:hover,
-.portfolio-choice:hover {
-    border-color: #078b83;
-}
-
-.button:disabled {
-    cursor: not-allowed;
-    opacity: 0.55;
-}
-
-.content-column {
-    min-width: 0;
-}
-
-.create-panel {
-    margin-bottom: 1.25rem;
-}
 
 .panel-heading {
     display: flex;
