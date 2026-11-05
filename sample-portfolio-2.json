@@ -1,0 +1,45 @@
+{
+  "id": "portfolio-002",
+  "name": "สมาชิกกลุ่มคนที่ 2",
+  "whatIEnjoy": "การออกแบบ UI/UX และการทำเว็บแบบ Responsive",
+  "whatIveTried": "จัดทำ HTML/CSS Layout โดยใช้ Bootstrap 5",
+  "whatICuriousAbout": "การใช้งาน Frontend Frameworks เช่น React ในอนาคต",
+  "items": [
+    {
+      "id": "item-003",
+      "title": "Personal Learning Portfolio Web App",
+      "type": "Course Project",
+      "date": "2026-11-01",
+      "role": "Frontend Developer",
+      "description": "พัฒนา Web Application สำหรับจัดเก็บและแสดงผล Portfolio ร่วมกับทีม",
+      "skills": ["HTML5", "CSS3", "Bootstrap 5", "JavaScript"],
+      "reflection": {
+        "whatIDid": "ออกแบบหน้าจอให้รองรับอุปกรณ์ Mobile และจัดการ Dynamic DOM",
+        "whatILearned": "การทำงานร่วมกันผ่าน Git และการบันทึกข้อมูลด้วย localStorage",
+        "challenge": "การทำให้ Layout การแสดงผลสวยงามบน screens ทุกขนาด",
+        "nextStep": "เพิ่มระบบ Filter และ Search สำหรับ Portfolio Items"
+      },
+      "evidence": [
+        "https://github.com/Ledomnat/CS100G13Project"
+      ]
+    },
+    {
+      "id": "item-004",
+      "title": "Interactive Web Form & Validation",
+      "type": "Class Assignment",
+      "date": "2026-10-25",
+      "role": "JavaScript Developer",
+      "description": "สร้างระบบตรวจสอบความถูกต้องของข้อมูลฟอร์ม และแสดงข้อความแจ้งเตือนเมื่อกรอกผิดพลาด",
+      "skills": ["JavaScript", "Form Validation", "DOM Manipulation"],
+      "reflection": {
+        "whatIDid": "เขียน Regular Expression ตรวจสอบ URL และรูปแบบ วัน/เดือน/ปี",
+        "whatILearned": "การจัดการ Event Listener และการป้องกัน Default Form Submit",
+        "challenge": "การแสดงข้อความแจ้งเตือนที่เป็นมิตรกับผู้ใช้งาน",
+        "nextStep": "นำระบบ Validation ไปใช้กับฟอร์มอื่นๆ ในโปรเจกต์"
+      },
+      "evidence": [
+        "https://example.com/form-validation-demo"
+      ]
+    }
+  ]
+}
