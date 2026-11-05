@@ -1,0 +1,45 @@
+{
+  "id": "portfolio-001",
+  "name": "นายอัฐวุฒิ สามทอง",
+  "whatIEnjoy": "การวิเคราะห์ข้อมูลสถิติ และการเขียนโปรแกรม Web App",
+  "whatIveTried": "สร้างโมเดลพยากรณ์ราคาสินทรัพย์ด้วย Machine Learning และพัฒนา Web App",
+  "whatICuriousAbout": "การพัฒนา Full-stack Web Application และ Cloud Services",
+  "items": [
+    {
+      "id": "item-001",
+      "title": "Financial Asset Forecasting Model",
+      "type": "Senior Research Project",
+      "date": "2026-10-15",
+      "role": "Data Analyst",
+      "description": "ประเมินประสิทธิภาพการพยากรณ์ Gold, S&P 500 และ Bitcoin ด้วย Machine Learning",
+      "skills": ["R", "Python", "Time Series", "Machine Learning"],
+      "reflection": {
+        "whatIDid": "รวบรวมข้อมูลรายสัปดาห์ และพัฒนาตัวแบบ ARIMAX และ Random Forest",
+        "whatILearned": "เข้าใจการนำปัจจัยมหภาคมาเพิ่มความแม่นยำให้ตัวแบบ",
+        "challenge": "การจัดการความผันผวนสูงในข้อมูล Bitcoin",
+        "nextStep": "ทดลองใช้ Ensemble Models ในการรวมผลพยากรณ์"
+      },
+      "evidence": [
+        "https://github.com/oattawutsam-png"
+      ]
+    },
+    {
+      "id": "item-002",
+      "title": "Stock Trading Workshop",
+      "type": "Training Workshop",
+      "date": "2025-06-20",
+      "role": "Participant",
+      "description": "เข้าร่วมการอบรมเทรดหุ้นและศึกษากลยุทธ์การบริหารความเสี่ยงในตลาดทุน",
+      "skills": ["Technical Analysis", "Risk Management"],
+      "reflection": {
+        "whatIDid": "ศึกษาตัวชี้วัดทางเทคนิคและการบริหารพอร์ตการลงทุน",
+        "whatILearned": "วิธีการวิเคราะห์จังหวะเข้าซื้อและจุดตัดขาดทุน",
+        "challenge": "การควบคุมอารมณ์ในการเทรดตามแผนที่วางไว้",
+        "nextStep": "นำความรู้มาประยุกต์ร่วมกับตัวแบบทางสถิติ"
+      },
+      "evidence": [
+        "https://example.com/certificate-stock-workshop"
+      ]
+    }
+  ]
+}
