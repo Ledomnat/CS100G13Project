@@ -15,7 +15,7 @@
 
 ## วิธีเปิดใช้งาน
 1. Clone Repository นี้ลงเครื่อง:
-  ```git clone https://github.com/Ledomnat/CS100G13Project.git```bash
+  ```git clone https://github.com/Ledomnat/CS100G13Project.git```
 
 2. เปิดไฟล์ index.html ด้วย Web Browser (เช่น Chrome, Edge, Safari) หรือเปิดผ่าน Live Server บน VS Code
    
